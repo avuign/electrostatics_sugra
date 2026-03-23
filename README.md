@@ -1,10 +1,10 @@
 # Electrostatic_Polarized_IKKT
 
-Numerical solver for a 4D electrostatic boundary value problem arising in theoretical physics ([arXiv:2411.18678](https://arxiv.org/abs/2411.18678), appendix D).
+Numerical solver for a 4D electrostatic boundary value problem. This code was used to produce some plots in the physics paper ([Einstein gravity from a matrix integral](https://arxiv.org/abs/2411.18678), appendix D).
 
 ## The problem
 
-Find the charge density $\sigma(r)$ on a conducting sphere such that the total electrostatic potential (ball + image + background) is constant on the conductor. This reduces to solving a singular integral equation where the kernel has a logarithmic singularity.
+Find the charge density $\sigma(r)$ on a conducting ball such that the total electrostatic potential (ball + image + background) is constant on the conductor. This reduces to solving a singular integral equation where the kernel has a logarithmic singularity.
 
 ## The approach
 
@@ -46,6 +46,7 @@ print(sigma(0.5))            # evaluate charge density at r = 0.5
 ```
 ├── charge_density.py  # Solver: basis expansion, potential matrix, least-squares solve
 ├── plots.py           # Reproduces figures 7–10 of the paper
+├── charge_density.nb  # Original Mathematica notebook (requires Wolfram license)
 └── README.md
 ```
 
